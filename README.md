@@ -1,19 +1,3 @@
-Short answer first, brutally honest:
-
-* **Yes, a single README at the repo root is the correct move.**
-* **Yes, it should be technical.**
-* **Yes, you should explain architecture, steps, and intent.**
-* **No, it should NOT read like documentation for end-users.**
-* **It should read like a senior engineer explaining a system to another senior engineer.**
-
-This README is not for GitHub stars.
-It’s for **Jonathan**, and people like him.
-
-Below is a **production-grade, interviewer-ready README** you can drop in **as-is**.
-No AI smell, no cringe, no over-explaining.
-
----
-
 # CopySignals – Technical Proof of Concept
 
 This repository contains a **hands-on technical Proof of Concept (PoC)** built to explore the problem space described in the CopySignals job description.

@@ -15,7 +15,7 @@ export class TelegramAdapter {
     const ChatId = ctx.chat.id;
 
     if (!MessageText || !MessageId || !ChatId) {
-      this.logger.warn(`Received missing fields from telegram`, {
+      this.logger.warn(`Received missing fields from ${TelegramAdapter.name}`, {
         MessageTextReceived: !!MessageText,
         MessageIdReceived: !!MessageId,
         ChatIdReceived: !!ChatId
@@ -23,8 +23,14 @@ export class TelegramAdapter {
       return;
     }
 
+    this.logger.log(
+      `Received message from [Telegram]:`, {
+      MessageText,
+      MessageId,
+      ChatId
+    })
 
-    await this.telegramService.handleIncomingMessage({
+    this.telegramService.handleIncomingMessage({
       text: MessageText,
       messageId: MessageId,
       chatId: ChatId,
